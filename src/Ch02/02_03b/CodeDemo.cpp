@@ -3,10 +3,19 @@
 // Using Variables, by Eduardo Corpeño 
 
 #include <iostream>
+using namespace std;
+
+int a, b = 9;
 
 int main(){
-    std::cout << "Hi There!" << std::endl;
+    cout << "Hi There!" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    cout << "Changing a to 15..." << endl;
+    a = 15;
+    cout << "Now a = " << a <<endl;
     
-    std::cout << std::endl << std::endl;
+    cout << endl << endl;
     return (0);
 }
