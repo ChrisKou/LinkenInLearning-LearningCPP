@@ -3,30 +3,46 @@
 // Arrays, by Eduardo Corpeño 
 
 #include <iostream>
-
-// #define AGE_LENGTH 4
+#include <string>
+using namespace std;
 
 int main(){
-    const size_t AGE_LENGTH = 4;
+    int qty_of_people;
+    cout << "Please enter the quantity of people you'll be entering in the system, up to 10.\n"
+    << "Quantity: ";
+    cin >> qty_of_people;
+    cout << endl;
+    
+    string name[10];
+    int age[10];
 
-    int age[AGE_LENGTH];
-    float temperature[] = {31.5, 32.7, 38.9};
+    //Get the info for each individual
+    int i = 1;
+    while (i <= qty_of_people)
+    {
+        cout << "Enter the first name of person " << i << ": ";
+        cin >> name[i-1];
 
-    age[0] = 25;
-    age[1] = 20;
-    age[2] = 19;
-    age[3] = 19;
+        cout << "Enter the age of person " << i << ": ";
+        cin >> age[i-1];
+        cout << endl;
 
-    std::cout << "The Age array has " << AGE_LENGTH << " elements." << std::endl;
-    std::cout << "Age[0] = " << age[0] << std::endl;
-    std::cout << "Age[1] = " << age[1] << std::endl;
-    std::cout << "Age[2] = " << age[2] << std::endl;
-    std::cout << "Age[3] = " << age[3] << std::endl;
-    std::cout << std::endl;
-    std::cout << "Temp[0] = " << temperature[0] << std::endl;
-    std::cout << "Temp[1] = " << temperature[1] << std::endl;
-    std::cout << "Temp[2] = " << temperature[2] << std::endl;
+        i += 1;
+    }
 
-    std::cout << std::endl << std::endl;
+    cout << endl << "-------------------------------------------------" << endl << endl;
+    cout << "The " << qty_of_people << " individuals entered are:" << endl << endl;
+    
+    //Display the info for each individual entered
+    i = 0;
+    while (i < qty_of_people)
+    {
+        cout << name[i] << endl;
+        cout << "Age: " << age[i] << endl << endl;
+
+        i += 1;
+    }
+
+    cout << endl << endl;
     return (0);
 }
